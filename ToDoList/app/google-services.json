@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_id": "to-do-list-63cec",
+    "project_number": "379377026998",
+    "name": "To Do List"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:379377026998:android:6c86cb1fc6d6c3da",
+        "client_id": "android:com.demo.raj.todolist",
+        "client_type": 1,
+        "android_client_info": {
+          "package_name": "com.demo.raj.todolist"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "379377026998-vfr7bej6flfjrh6la5dkpgi6v9cist4v.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.demo.raj.todolist",
+            "certificate_hash": "9B85D3650C17219486689B69B31CEAEB3084D045"
+          }
+        },
+        {
+          "client_id": "379377026998-bj829knr5cst3c9em42ih0ih2dadpo2q.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "cloud_messaging_service": {
+          "status": 1,
+          "apns_config": []
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "google_signin_service": {
+          "status": 2
+        },
+        "ads_service": {
+          "status": 1
+        }
+      }
+    }
+  ],
+  "client_info": [],
+  "ARTIFACT_VERSION": "1"
+}
