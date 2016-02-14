@@ -27,6 +27,8 @@ public class SignInActivity extends AppCompatActivity implements GoogleApiClient
 
     // sign-in request code
     private static final int SIGN_IN_REQUEST_CODE = 100;
+    private static final int SIGN_IN_FAILED = 101;
+    private static final int SIGN_IN_CANCELLED = 102;
 
     // GoogleApiClient
     GoogleApiClient mGoogleApiClient;
@@ -82,8 +84,23 @@ public class SignInActivity extends AppCompatActivity implements GoogleApiClient
     // hides the progress dialog if it's showing
     private void hideProgressDialog() {
 
-        if (mProgressDlg.isShowing())
+        if (mProgressDlg.isShowing()) {
+
             mProgressDlg.hide();
+            mProgressDlg.cancel();
+        }
+    }
+
+    // shows a toast
+    private void showToast(int result) {
+
+        if(result == SIGN_IN_CANCELLED) {
+
+            Toast.makeText(this, "Sign-in cancelled! Please check internet connection.", Toast.LENGTH_SHORT).show();
+        }else if(result == SIGN_IN_FAILED){
+
+            Toast.makeText(this, "Sign-in failed! Please try again later.", Toast.LENGTH_SHORT).show();
+        }
     }
 
     // OnConnectionFailedListener callback
@@ -122,9 +139,11 @@ public class SignInActivity extends AppCompatActivity implements GoogleApiClient
                     GoogleSignInResult result = Auth.GoogleSignInApi.getSignInResultFromIntent(data);
                     handleSignInResult(result);
 
-                }else{
+                }else if(resultCode == RESULT_CANCELED){
 
-                    Log.v(LOG_TAG, "Google sign-in cancelled!");
+                    Log.v(LOG_TAG, "Google sign-in cancelled! " + resultCode);
+                    hideProgressDialog();
+                    showToast(SIGN_IN_CANCELLED);
                 }
                 break;
         }
@@ -148,14 +167,14 @@ public class SignInActivity extends AppCompatActivity implements GoogleApiClient
 
             mSignInButton.setVisibility(View.GONE);
             mSignOutButton.setVisibility(View.VISIBLE);
+
             // goto the to-do list activity
-
+            startActivity(new Intent(this, ToDosActivity.class));
         }else{
-
-            Toast.makeText(this, "Sign-in failed! Try again later.", Toast.LENGTH_SHORT).show();
 
             // failed attempt - show un-authenticated UI
             Log.v(LOG_TAG, "sign-in failed!");
+            showToast(SIGN_IN_FAILED);
         }
         hideProgressDialog();
     }
