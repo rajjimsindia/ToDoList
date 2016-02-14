@@ -1,4 +1,8 @@
 <resources>
     <string name="app_name">Sign-in</string>
     <string name="sign_out_btn_text">Sign Out</string>
+    <string name="title_activity_to_dos">ToDosActivity</string>
+    <string name="action_settings">Settings</string>
+    <string name="empty_list_view_text">Add a To-DO to start</string>
+    <string name="todo_list_text">To-Do List</string>
 </resources>
