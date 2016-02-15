@@ -1,4 +1,4 @@
-package com.demo.raj.todolist;
+package com.demo.raj.todolist.ui;
 
 import android.os.Bundle;
 import android.support.annotation.Nullable;
@@ -12,6 +12,8 @@ import android.view.ViewGroup;
 import android.widget.ListView;
 import android.widget.TextView;
 import android.widget.Toast;
+
+import com.demo.raj.todolist.R;
 
 /**
  * Created by raj on 2/14/2016.

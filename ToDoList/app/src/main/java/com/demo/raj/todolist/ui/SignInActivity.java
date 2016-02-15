@@ -1,4 +1,4 @@
-package com.demo.raj.todolist;
+package com.demo.raj.todolist.ui;
 
 import android.app.ProgressDialog;
 import android.content.Intent;
@@ -9,6 +9,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.Toast;
 
+import com.demo.raj.todolist.R;
 import com.google.android.gms.auth.api.Auth;
 import com.google.android.gms.auth.api.signin.GoogleSignInAccount;
 import com.google.android.gms.auth.api.signin.GoogleSignInOptions;
