@@ -11,8 +11,11 @@ public class Item {
     // name of the location
     private String mLocationName;
 
-    // timestamp of the item
-    private String mTimestamp;
+    // date of the item
+    private String mDate;
+
+    // time of the item
+    private String mTime;
 
     public Item(){}
 
@@ -35,12 +38,21 @@ public class Item {
     }
 
     /**
-     * Time at which To-Do needs to be performed
-     * @param timestamp
+     * Date at which To-Do needs to be performed
+     * @param date
      */
-    public void setTimestamp(String timestamp){
+    public void setDate(String date){
 
-        this.mTimestamp = timestamp;
+        this.mDate = date;
+    }
+
+    /**
+     * Time at which To-Do needs to be performed
+     * @param time
+     */
+    public void setTime(String time){
+
+        this.mTime = time;
     }
 
     /**
@@ -63,10 +75,19 @@ public class Item {
 
     /**
      * Time of item
-     * @return
+     * @return time
      */
-    public String getTimestamp(){
+    public String getTime(){
 
-        return this.mTimestamp;
+        return this.mTime;
+    }
+
+    /**
+     * Date of item
+     * @return date
+     */
+    public String getDate(){
+
+        return this.mDate;
     }
 }
