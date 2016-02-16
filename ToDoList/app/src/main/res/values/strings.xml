@@ -1,8 +1,14 @@
 <resources>
-    <string name="app_name">Sign-in</string>
+    <string name="app_name">Your To-Do\'s</string>
     <string name="sign_out_btn_text">Sign Out</string>
-    <string name="title_activity_to_dos">ToDosActivity</string>
+    <string name="title_activity_to_dos">To Do Activity</string>
     <string name="action_settings">Settings</string>
-    <string name="empty_list_view_text">Add a To-DO to start</string>
+    <string name="empty_list_view_text">Add a To-Do to start</string>
     <string name="todo_list_text">To-Do List</string>
+    <string name="api_key">AIzaSyBITcXfgmFqnIisHtBqXiI82R37hXpa08M</string>
+    <string name="choose_location">Choose Location</string>
+    <string name="hint_desc">Enter Description</string>
+    <string name="title_description_dlg">To-Do:</string>
+    <string name="text_choose_time">Choose Time</string>
+    <string name="text_ok">OK</string>
 </resources>
